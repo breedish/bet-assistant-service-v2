@@ -8,6 +8,8 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.CacheStats;
 import com.google.common.cache.LoadingCache;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -45,6 +47,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @EnableConfigurationProperties(BetProperties.class)
 public class BetApplication {
 
+    private static Logger LOG = LoggerFactory.getLogger(BetApplication.class);
+
     static final String X_BET_HEADER = "X-bet-version=v2";
 
     private BetProperties betProperties;
@@ -58,6 +62,7 @@ public class BetApplication {
 
     @PostConstruct
     public void init() {
+        LOG.info("properties {}", betProperties.getStoragePath());
         filesCache = CacheBuilder.newBuilder()
             .maximumSize(betProperties.getCacheSize())
             .recordStats()
