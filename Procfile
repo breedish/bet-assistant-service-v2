@@ -1,1 +1,1 @@
-web mkdir -p /app/files && java -Dserver.port=$PORT -Dbet.storagePath=${DYNO} $JAVA_OPTS -jar target/bet.war
+web mkdir -p /tmp/files && java -Dserver.port=$PORT -Dbet.storagePath=/tmp/files $JAVA_OPTS -jar target/bet.war
