@@ -11,6 +11,7 @@ import com.google.common.cache.LoadingCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jmx.export.annotation.ManagedOperation;
@@ -41,6 +42,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("/api/v2/files")
 @SpringBootApplication
 @ManagedResource(objectName = "bet:name=BetController")
+@EnableConfigurationProperties(BetProperties.class)
 public class BetApplication {
 
     static final String X_BET_HEADER = "X-bet-version=v2";
