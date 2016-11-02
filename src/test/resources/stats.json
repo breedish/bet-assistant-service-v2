@@ -1,0 +1,310 @@
+{
+  "homeScoresTotal": 1816,
+  "awayScoresTotal": 1697,
+  "totalMatches": 21,
+  "futureMatches": [
+    {
+      "matchDate": 1478167200000,
+      "homeTeam": 91210,
+      "awayTeam": 91201
+    },
+    {
+      "matchDate": 1478253600000,
+      "homeTeam": 91203,
+      "awayTeam": 91207
+    },
+    {
+      "matchDate": 1478253600000,
+      "homeTeam": 91209,
+      "awayTeam": 91204
+    },
+    {
+      "matchDate": 1478322000000,
+      "homeTeam": 91205,
+      "awayTeam": 91208
+    },
+    {
+      "matchDate": 1478329200000,
+      "homeTeam": 91202,
+      "awayTeam": 91201
+    },
+    {
+      "matchDate": 1478329200000,
+      "homeTeam": 91206,
+      "awayTeam": 91210
+    },
+    {
+      "matchDate": 1478408400000,
+      "homeTeam": 91203,
+      "awayTeam": 91204
+    },
+    {
+      "matchDate": 1478415600000,
+      "homeTeam": 91207,
+      "awayTeam": 91201
+    },
+    {
+      "matchDate": 1478415600000,
+      "homeTeam": 91209,
+      "awayTeam": 91208
+    },
+    {
+      "matchDate": 1478599200000,
+      "homeTeam": 91205,
+      "awayTeam": 91209
+    },
+    {
+      "matchDate": 1478685600000,
+      "homeTeam": 91203,
+      "awayTeam": 91206
+    },
+    {
+      "matchDate": 1478685600000,
+      "homeTeam": 91204,
+      "awayTeam": 91208
+    }
+  ],
+  "allMatches": [
+    {
+      "matchDate": 1477112400000,
+      "homeTeam": 91203,
+      "awayTeam": 91205,
+      "homeScore": 81,
+      "awayScore": 69
+    },
+    {
+      "matchDate": 1477119600000,
+      "homeTeam": 91201,
+      "awayTeam": 91208,
+      "homeScore": 100,
+      "awayScore": 95
+    },
+    {
+      "matchDate": 1477119600000,
+      "homeTeam": 91207,
+      "awayTeam": 91204,
+      "homeScore": 63,
+      "awayScore": 80
+    },
+    {
+      "matchDate": 1477198800000,
+      "homeTeam": 91202,
+      "awayTeam": 91210,
+      "homeScore": 91,
+      "awayScore": 85
+    },
+    {
+      "matchDate": 1477206000000,
+      "homeTeam": 91205,
+      "awayTeam": 91206,
+      "homeScore": 67,
+      "awayScore": 79
+    },
+    {
+      "matchDate": 1477206000000,
+      "homeTeam": 91209,
+      "awayTeam": 91207,
+      "homeScore": 88,
+      "awayScore": 73
+    },
+    {
+      "matchDate": 1477389600000,
+      "homeTeam": 91209,
+      "awayTeam": 91201,
+      "homeScore": 114,
+      "awayScore": 91
+    },
+    {
+      "matchDate": 1477476000000,
+      "homeTeam": 91202,
+      "awayTeam": 91206,
+      "homeScore": 98,
+      "awayScore": 71
+    },
+    {
+      "matchDate": 1477476000000,
+      "homeTeam": 91207,
+      "awayTeam": 91205,
+      "homeScore": 71,
+      "awayScore": 73
+    },
+    {
+      "matchDate": 1477562400000,
+      "homeTeam": 91203,
+      "awayTeam": 91210,
+      "homeScore": 99,
+      "awayScore": 67
+    },
+    {
+      "matchDate": 1477648800000,
+      "homeTeam": 91201,
+      "awayTeam": 91204,
+      "homeScore": 87,
+      "awayScore": 86
+    },
+    {
+      "matchDate": 1477648800000,
+      "homeTeam": 91205,
+      "awayTeam": 91202,
+      "homeScore": 84,
+      "awayScore": 94
+    },
+    {
+      "matchDate": 1477717200000,
+      "homeTeam": 91210,
+      "awayTeam": 91209,
+      "homeScore": 93,
+      "awayScore": 90
+    },
+    {
+      "matchDate": 1477724400000,
+      "homeTeam": 91206,
+      "awayTeam": 91207,
+      "homeScore": 85,
+      "awayScore": 74
+    },
+    {
+      "matchDate": 1477724400000,
+      "homeTeam": 91208,
+      "awayTeam": 91203,
+      "homeScore": 83,
+      "awayScore": 88
+    },
+    {
+      "matchDate": 1477803600000,
+      "homeTeam": 91204,
+      "awayTeam": 91202,
+      "homeScore": 80,
+      "awayScore": 77
+    },
+    {
+      "matchDate": 1477810800000,
+      "homeTeam": 91201,
+      "awayTeam": 91205,
+      "homeScore": 78,
+      "awayScore": 76
+    },
+    {
+      "matchDate": 1477810800000,
+      "homeTeam": 91208,
+      "awayTeam": 91206,
+      "homeScore": 100,
+      "awayScore": 82
+    },
+    {
+      "matchDate": 1477994400000,
+      "homeTeam": 91204,
+      "awayTeam": 91210,
+      "homeScore": 73,
+      "awayScore": 68
+    },
+    {
+      "matchDate": 1478080800000,
+      "homeTeam": 91202,
+      "awayTeam": 91207,
+      "homeScore": 74,
+      "awayScore": 75
+    },
+    {
+      "matchDate": 1478080800000,
+      "homeTeam": 91209,
+      "awayTeam": 91203,
+      "homeScore": 85,
+      "awayScore": 85,
+      "homeFullScore": 107,
+      "awayFullScore": 104
+    }
+  ],
+  "teamInfos": [
+    {
+      "teamID": 91201,
+      "teamShortName": "Anyang",
+      "teamNames": {
+        "en": "Anyang KGC",
+        "ru": "Аньян КДжК",
+        "ko": "안양 KGC인삼공사"
+      }
+    },
+    {
+      "teamID": 91202,
+      "teamShortName": "Dongbu Promy",
+      "teamNames": {
+        "en": "Wonju Dongbu Promy",
+        "ru": "Вонджу Тонпу Проми",
+        "ko": "원주 동부 프로미"
+      }
+    },
+    {
+      "teamID": 91203,
+      "teamShortName": "Goyang",
+      "teamNames": {
+        "en": "Goyang Orion Orions",
+        "ru": "Коян Орайэнс",
+        "ko": "고양 오리온 오리온스"
+      }
+    },
+    {
+      "teamID": 91204,
+      "teamShortName": "Incheon",
+      "teamNames": {
+        "en": "Incheon Electroland Elephants",
+        "ru": "Инчхон Элефантс",
+        "ko": "인천 전자랜드 엘리펀츠"
+      }
+    },
+    {
+      "teamID": 91205,
+      "teamShortName": "KCC Egis",
+      "teamNames": {
+        "en": "Jeonju KCC Egis",
+        "ru": "Чонджу Иджис",
+        "ko": "전주 KCC 이지스"
+      }
+    },
+    {
+      "teamID": 91206,
+      "teamShortName": "LG Sakers",
+      "teamNames": {
+        "en": "Changwon LG Sakers",
+        "ru": "Чханвон Сэйкерс",
+        "ko": "창원 LG 세이커스"
+      }
+    },
+    {
+      "teamID": 91207,
+      "teamShortName": "Mobis Phoebus",
+      "teamNames": {
+        "en": "Ulsan Mobis Phoebus",
+        "ru": "Ульсан Мобис Фебус",
+        "ko": "울산 모비스 피버스"
+      }
+    },
+    {
+      "teamID": 91208,
+      "teamShortName": "Seoul Knights",
+      "teamNames": {
+        "en": "Seoul SK Knights",
+        "ru": "Сеул Найтс",
+        "ko": "서울 SK 나이츠"
+      }
+    },
+    {
+      "teamID": 91209,
+      "teamShortName": "Seoul Thunders",
+      "teamNames": {
+        "en": "Seoul Samsung Thunders",
+        "ru": "Сеул Самсунг Тандерс",
+        "ko": "서울 삼성 썬더스"
+      }
+    },
+    {
+      "teamID": 91210,
+      "teamShortName": "Sonic Boom",
+      "teamNames": {
+        "en": "Busan kt Sonicboom",
+        "ru": "Пусан КТ Соник Бум",
+        "ko": "부산 kt 소닉붐"
+      }
+    }
+  ]
+}
