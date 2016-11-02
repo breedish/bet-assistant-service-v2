@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/bet.war
+web mkdir -p /app/files && java -Dserver.port=$PORT -bet.storagePath=/app/files $JAVA_OPTS -jar target/bet.war
