@@ -77,7 +77,7 @@ public class BetApplication {
                 });
     }
 
-    @RequestMapping(path = "/{file}", method = POST, headers = {X_BET_HEADER}, consumes = APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/{file}", method = POST, headers = {X_BET_HEADER})
     public ResponseEntity save(@RequestBody String json, @PathVariable String file) throws IOException {
         validateJson(json);
         FileCopyUtils.copy(json, new FileWriter(filePath(file), false));
