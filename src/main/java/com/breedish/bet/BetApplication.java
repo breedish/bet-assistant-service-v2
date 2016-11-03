@@ -47,9 +47,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @EnableConfigurationProperties(BetProperties.class)
 public class BetApplication {
 
-    private static Logger LOG = LoggerFactory.getLogger(BetApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BetApplication.class);
 
-    static final String X_BET_HEADER = "X-bet-version=v2";
+    private static final String X_BET_HEADER = "X-bet-version=v2";
 
     private BetProperties betProperties;
 
