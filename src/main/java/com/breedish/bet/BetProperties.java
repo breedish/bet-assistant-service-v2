@@ -1,5 +1,6 @@
 package com.breedish.bet;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "bet")
+@Data
 public class BetProperties {
 
     private String storagePath;
@@ -16,27 +18,11 @@ public class BetProperties {
 
     private Integer cacheTime;
 
-    public String getStoragePath() {
-        return storagePath;
-    }
+    private String ftpServer;
 
-    public void setStoragePath(String storagePath) {
-        this.storagePath = storagePath;
-    }
+    private String ftpUser;
 
-    public Integer getCacheSize() {
-        return cacheSize;
-    }
+    private String ftpPassword;
 
-    public void setCacheSize(Integer cacheSize) {
-        this.cacheSize = cacheSize;
-    }
-
-    public Integer getCacheTime() {
-        return cacheTime;
-    }
-
-    public void setCacheTime(Integer cacheTime) {
-        this.cacheTime = cacheTime;
-    }
+    private String ftpDataDirectory;
 }

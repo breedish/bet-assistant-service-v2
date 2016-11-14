@@ -51,9 +51,19 @@
             <version>19.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+
     </dependencies>
-
-
 
     <build>
         <finalName>bet</finalName>
@@ -64,6 +74,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

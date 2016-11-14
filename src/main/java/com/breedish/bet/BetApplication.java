@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -35,6 +36,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.ResponseEntity.ok;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -53,16 +55,19 @@ public class BetApplication {
 
     private BetProperties betProperties;
 
+    private FtpUploader ftpUploader;
+
     private LoadingCache<String, String> filesCache;
 
     @Autowired
-    public BetApplication(BetProperties betProperties) {
+    public BetApplication(BetProperties betProperties, FtpUploader ftpUploader) {
         this.betProperties = betProperties;
+        this.ftpUploader = ftpUploader;
     }
 
     @PostConstruct
     public void init() {
-        LOG.info("properties {}", betProperties.getStoragePath());
+        LOG.info("properties: {}", betProperties);
         filesCache = CacheBuilder.newBuilder()
             .maximumSize(betProperties.getCacheSize())
             .recordStats()
@@ -81,6 +86,7 @@ public class BetApplication {
     public ResponseEntity save(@RequestBody String json, @PathVariable String file) throws IOException {
         validateJson(json);
         FileCopyUtils.copy(json, new FileWriter(filePath(file), false));
+        ftpUploader.uploadData(new ByteArrayInputStream(json.getBytes(UTF_8)), file);
         filesCache.invalidate(file);
         return new ResponseEntity<String>(HttpStatus.CREATED);
     }

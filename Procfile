@@ -1,1 +1,1 @@
-web mkdir -p /tmp/files && java -Dserver.port=$PORT -Dbet.storagePath=/tmp/files $JAVA_OPTS -jar target/bet.war
+web mkdir -p /tmp/files && java -Dbet.ftpServer=${FTP_HOST} -Dbet.ftpUser=${FTP_USERNAME} -Dbet.ftpPassword=${FTP_PASSWORD} -Dserver.port=$PORT -Dbet.storagePath=/tmp/files $JAVA_OPTS -jar target/bet.war
