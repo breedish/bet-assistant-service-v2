@@ -53,10 +53,10 @@ public class BetApplicationIntegrationTest {
 
         ResponseEntity entity = restTemplate.postForEntity(
             path, new HttpEntity<>(statsBody, headers()), ResponseEntity.class);
-        assertEquals(entity.getStatusCodeValue(), CREATED.value());
+        assertEquals(CREATED.value(), entity.getStatusCodeValue());
 
         ResponseEntity<String> response = restTemplate.exchange(path, GET, new HttpEntity(headers()), String.class);
-        assertEquals(response.getStatusCodeValue(), OK.value());
+        assertEquals(OK.value(), response.getStatusCodeValue());
         assertEquals(statsBody, response.getBody());
     }
 
@@ -68,7 +68,7 @@ public class BetApplicationIntegrationTest {
         ResponseEntity entity = restTemplate.postForEntity(
             path, new HttpEntity<>("{name:1 description:'title'}", headers()), ResponseEntity.class
         );
-        assertEquals(entity.getStatusCodeValue(), BAD_REQUEST.value());
+        assertEquals(BAD_REQUEST.value(), entity.getStatusCodeValue());
     }
 
     @Test
@@ -77,7 +77,7 @@ public class BetApplicationIntegrationTest {
         final String path = fileEndpointPath(file);
 
         ResponseEntity<String> response = restTemplate.exchange(path, GET, new HttpEntity(headers()), String.class);
-        assertEquals(response.getStatusCodeValue(), NOT_FOUND.value());
+        assertEquals(NOT_FOUND.value(), response.getStatusCodeValue());
     }
 
     private String fileEndpointPath(String file) {

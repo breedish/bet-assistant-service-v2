@@ -74,7 +74,7 @@ public class BetApplication {
                 new CacheLoader<String, String>() {
                     public String load(String file) throws Exception {
                         StringWriter writer = new StringWriter();
-                        FileCopyUtils.copy(new BufferedReader(new FileReader(filePath(file))), writer);
+                        FileCopyUtils.copy(new BufferedReader(new FileReader(filePath(fileName(file)))), writer);
                         return writer.toString();
                     }
                 });
@@ -83,9 +83,10 @@ public class BetApplication {
     @RequestMapping(path = "/{file}", method = POST, headers = {X_BET_HEADER})
     public ResponseEntity save(@RequestBody String json, @PathVariable String file) throws IOException {
         validateJson(json);
-        final String filename = file + ".json";
-        FileCopyUtils.copy(json, new FileWriter(filePath(filename), false));
-        ftpUploader.uploadData(json, filename);
+        final String filename = fileName(file);
+        final File localFilePath = filePath(filename);
+        FileCopyUtils.copy(json, new FileWriter(localFilePath, false));
+        ftpUploader.uploadData(localFilePath, filename);
         filesCache.invalidate(file);
         return new ResponseEntity<String>(HttpStatus.CREATED);
     }
@@ -110,6 +111,10 @@ public class BetApplication {
         statsInfo.put("missCount", stats.missCount());
         statsInfo.put("totalLoadTime", stats.totalLoadTime());
         return statsInfo;
+    }
+
+    private String fileName(String file) {
+        return file + ".json";
     }
 
     private File filePath(String fileName) {
