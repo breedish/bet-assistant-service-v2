@@ -38,7 +38,7 @@ public class FtpUploader {
             client.enterLocalPassiveMode();
             client.setFileType(BINARY_FILE_TYPE);
             client.login(betProperties.getFtpUser(), betProperties.getFtpPassword());
-            client.storeFile(new File(betProperties.getFtpDataDirectory(), filename).toString(), is);
+            client.storeFile(new File(betProperties.getFtpStoragePath(), filename).toString(), is);
             client.logout();
             is.close();
         } catch (IOException e) {

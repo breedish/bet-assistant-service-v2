@@ -24,5 +24,5 @@ public class BetProperties {
 
     private String ftpPassword;
 
-    private String ftpDataDirectory;
+    private String ftpStoragePath;
 }
