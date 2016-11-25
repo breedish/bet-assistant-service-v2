@@ -1,5 +1,6 @@
 package com.breedish.bet;
 
+import com.breedish.bet.monitoring.Monitoring;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -50,12 +51,15 @@ public class BetController {
 
     private FtpUploader ftpUploader;
 
+    private Monitoring monitoring;
+
     private LoadingCache<String, String> filesCache;
 
     @Autowired
-    public BetController(BetProperties betProperties, FtpUploader ftpUploader) {
+    public BetController(BetProperties betProperties, FtpUploader ftpUploader, Monitoring monitoring) {
         this.betProperties = betProperties;
         this.ftpUploader = ftpUploader;
+        this.monitoring = monitoring;
     }
 
     @PostConstruct
@@ -83,6 +87,10 @@ public class BetController {
         FileCopyUtils.copy(json, new FileWriter(localFilePath, false));
         ftpUploader.uploadData(localFilePath, filename);
         filesCache.invalidate(file);
+
+        monitoring.incrementCount();
+        monitoring.mark();
+
         return new ResponseEntity<String>(HttpStatus.CREATED);
     }
 
