@@ -81,6 +81,7 @@ public class BetController {
 
     @RequestMapping(path = "/{file}", method = POST, headers = {X_BET_HEADER})
     public ResponseEntity save(@RequestBody String json, @PathVariable String file) throws IOException {
+        LOG.info("Save [" + file + "] json data");
         validateJson(json);
         final String filename = fileName(file);
         final File localFilePath = filePath(filename);
