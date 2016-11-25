@@ -25,4 +25,10 @@ public class BetProperties {
     private String ftpPassword;
 
     private String ftpStoragePath;
+
+    private String graphiteApiKey;
+
+    private String graphiteHost;
+
+    private Integer graphitePort;
 }

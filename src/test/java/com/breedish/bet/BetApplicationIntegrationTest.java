@@ -28,7 +28,7 @@ import static org.springframework.http.HttpStatus.OK;
  * @author zenind
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = BetApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = {BetApplication.class, BetTestConfiguration.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BetApplicationIntegrationTest {
 
     @Autowired
